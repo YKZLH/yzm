@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9">
+		<title>云端转码服务系统</title>
+		<link rel="stylesheet" type="text/css" href="<?=Web_Path?>packs/layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="<?=Web_Path?>packs/public/css/common.css?v=1.1">
+		<link rel="stylesheet" type="text/css" href="<?=Web_Path?>packs/font/font.css">
+		<script src="<?=Web_Path?>packs/jquery/jquery.min.js"></script>
+		<script src="<?=Web_Path?>packs/layui/layui.js"></script>
+	</head>
+	<body style="padding: 10px;">
+        <table class="layui-table">
+            <colgroup>
+                <col width="140">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">网站基本信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>软件名称</td>
+                    <td>云端转码</td>
+                </tr>
+                <tr>
+                    <td>允许上传最大值</td>
+                    <td><?=get_cfg_var("upload_max_filesize")?></td>
+                </tr>
+                <tr>
+                    <td>POST提交最大值</td>
+                    <td><?=get_cfg_var("post_max_size")?></td>
+                </tr>
+            </tbody>
+        </table>
+		<table class="layui-table">
+            <colgroup>
+                <col width="140">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">开发团队</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>当前版本</td>
+                    <td>&nbsp;<?=$ver?>&nbsp;&nbsp;<span id="update" style="display: none;">发现新版本：<font color=red>v1.2.0</font> <a href="javascript:;" onclick="update();" style="color:#00f;">&nbsp;一键更新</a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>总 策 划</td>
+                    <td>&nbsp;云端转码网络科技有限公司</td>
+                </tr>
+                <tr>
+                    <td>支持团队</td>
+                    <td>&nbsp;云端团队</td>
+                </tr>
+            </tbody>
+        </table>
+	</body>
+</html>

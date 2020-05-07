@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+    <title>云转码-使用文档</title>
+    <meta property="og:title" content="WebTorrent - Streaming browser torrent client">
+    <meta name="description"
+          content="WebTorrent, the streaming torrent client for the browser, Mac, Windows, and Linux">
+    <meta property="og:description"
+          content="WebTorrent, the streaming torrent client for the browser, Mac, Windows, and Linux">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://webtorrent.io/WebTorrent.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://webtorrent.io/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="../packs/public/css/index2.css">
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Asap:400,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700">
+    <link rel="stylesheet" href="../packs/public/css/document.css">
+</head>
+<body>
+<div class="body">
+     <header class="header"><h1><a href="/">云转码</a></h1>
+        <nav><a href="../template/use.html">开始使用</a><a href="../template/specification.html">文档</a>
+        <a href="../template/problem.html">常见问题</a>
+        <a class="new-release" href="../template/download.html">下载</a>
+        <a href="../template/document.html" target="_blank">使用文档</a>
+        <a class="btn" href="https://github.com/webtorrent/webtorrent" target="_blank">GitHub</a></nav>
+    </header>
+    <div class="header1">
+        <h3>云转码系统功能文档</h3>
+    </div>
+    <div class="center">
+        <table>
+            <tr>
+                <td><h2>视频列表：</h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>所有视频：</strong> 这里能显示所有的视频，里面可根据视频名字进行模糊查询，然后还可以根据转码状态，视频分类，时间来查询出相应的视频出来。</p>
+                    <p><strong>转码队列：</strong>需要转码的是视频在这里显示，这里也可以查询其他视频。</p>
+                    <p><strong>视频分类：</strong>添加视频的类型，这样好将同类视频划分在一起，方便查看。</p>
+                </td>
+            </tr>
+            <tr>
+                <td><h2>系统配置：</h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>基本设置：</strong>这里面主要设置的是网站域名，转码域名，M3U8域名，网站路径，网站前台界面是否开启，删除后是否保留转码后的M3U8文件，转码后是否保留上传的源文件。</p>
+                    <p><strong>转码设置：</strong></p>
+                   <ol>
+                       <li>ffmpeg路径：ffmpeg的安装路径，绝对路径</li>
+                       <li>转码切换：h265和h264</li>
+                       <li>待转码目录：当转码队列完成后，会自动对该目录进行转码并入库</li>
+                       <li>是否加密，是否秒切</li>
+                       <li>音频是否复制：是否复制音频流，复制则原音质输出，不复制音频流即默认压缩音频，压缩音频有损音质</li>
+                       <li>转码方式：画质优先，转码速度则变慢</li>
+                       <li>Ts伪装：Ts伪装成其他文件，如：jpg，该功能只在开启m3u8防盗后有效</li>
+                       <li>跳过片头：是否跳过片头，时间为秒数</li>
+                       <li>双码率开关：是否开启多码率转码</li>
+                       <li>码率：用于约束转码后的视频尺寸，如320x180，留空则是原画</li>
+                       <li>TS时长：单个TS的时长，建议设置为10左右</li>
+                       <li>保存路径：转码后m3u8保存的路径，绝对路径，不能留空</li>
+                       <li>M3U8后缀：M3U8保存的文件名字，如：[年]/[月]/[日]/[md5]/m3u8.m3u8</li>
+                       <li>截图后缀：截图保存的文件名字，如：[年]/[月]/[日]/[md5]/vod.jpg，多张序号可以用[xu]来代替序号</li>
+                   </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>水印设置：</strong></p>
+                    <ol>
+                        <li>左上水印间距，右上水印间距，左下水印间距，右下水印间距；就是水印到边的距离</li>
+                        <li>字幕开关：打开才会有字幕功能</li>
+                        <li>字幕内容：这里可以自己定义字幕</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>截图设置：</strong></p>
+                    <ol>
+                        <li>截图张数: 总共截取图片张数，默认1张</li>
+                        <li>间隔时间: 截图间隔时间，秒数，几秒截取一张</li>
+                        <li>截图尺寸: 截取图片的宽高，如320x180，留空表示跟视频保持一致</li>
+                        <li>开始位置: GIF开始时视频的秒数</li>
+                        <li>动图时长: GIF图片的时长，建议2-4秒</li>
+                        <li>动图尺寸: GIF图片的宽高，如320x180，留空表示跟视频保持一致</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <p><strong>上传设置：</strong></p>
+                <ol>
+                    <li>上传路径: 视频上传存储路径，如：F:/video/，网站目录请用./开头</li>
+                    <li>支持格式: 上传支持的格式，如:avi|wmv|mpeg|mp4|mov|mkv|flv|f4v|m4v|rmvb|rm|mpg</li>
+                    <li>秒传开关: 注意：开启后上传之前会进行文件MD5验证，大文件不建议开启</li>
+                    <li>外部上传: 注意：开启后可以通过地址 http://120.53.18.213/index.php/upapi.html 进行上传</li>
+                </ol>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>防盗设置：</strong></p>
+                    <ol>
+                        <li>防盗开关: 域名防盗链是否开启</li>
+                        <li>直接访问: 注意：关闭后不能直接打开播放地址，只能用IF框架进行播放</li>
+                        <li>M3U8防盗: 注意：开启后m3u8地址会变更，不能直接访问M3U8地址</li>
+                        <li>放行域名: 留空为不限制，多个域名用竖线"|"隔开，如：www.123.tv|www.ctcms.cn</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>同步设置：</strong></p>
+                    <ol>
+                        <li>同步地址: API同步地址，如：http://demo.ctcms.cn/yunapi</li>
+                        <li>同步秘钥: API同步秘钥，如：yunzhuanma520</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>后台密码：</strong></p>
+                    <ol>
+                        <li>登录账号:按到自己的来</li>
+                        <li>登录密码: 建议6位以上</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>上传视频：</strong>这里的视频上传功能可以对视频进行分类上传，但是没有实现批量上传功能。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footerWrap">
+        <footer class="clearfix">
+        <section><h3>Learn</h3>
+        <a href="../template/use.html">Get Started</a>
+        <a href="../template/specification.html">Docs</a>
+        <a href="../template/problem.html">FAQ</a></section>
+        <section><h3>Connect</h3>
+        <a href="https://twitter.com/WebTorrentApp">Twitter</a>
+        <a  href="https://github.com/webtorrent/webtorrent">GitHub</a>
+            <iframe class="gh-button"
+                    src="https://ghbtns.com/github-btn.html?user=webtorrent&amp;repo=webtorrent&amp;type=star&amp;count=true&amp;size=large"
+                    frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </section>
+        <section><h3>Support</h3>
+        <!--<a href="https://github.com/webtorrent/webtorrent/issues">Open an issue</a>
+        <a href="https://gitter.im/webtorrent/webtorrent">Chat in Gitter</a>-->
+         <a href="../template/problem.html">Open an issue</a>
+        <a href="../template/problem.html">Chat in Gitter</a>
+            <div>#webtorrent on IRC (freenode)</div>
+        </section>
+        <section class="sponsors">
+            <h3>Open Source Sponsors</h3>
+            <!--<a href="https://brave.com" rel="nofollow" target="_blank">Brave</a>-->
+              <a href="../template/problem.html" rel="nofollow" target="_blank">Brave</a>
+            </section>
+    </footer>
+    </div>
+    <script src="https://webtorrent.io/bundle.js"></script>
+    <script>window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+    }
+    ga.l = +new Date
+    ga('create', 'UA-3898076-19', 'auto')
+    ga('send', 'pageview')</script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+</div>
+</body>
+</html>

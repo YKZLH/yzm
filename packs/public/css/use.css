@@ -1,0 +1,31 @@
+.center_top{
+    text-align: center;
+}
+.center{
+    width: 900px;
+    height: 400px;
+    margin-left: 400px;
+}
+.center_tr{
+   width: 50px;
+    height:40px;
+}
+.btn{
+    height: 45px;
+    width: 80px;
+    background: green;
+    border: none;
+    border-radius:10px;
+    color: #fff;
+}
+.btn1{
+    height: 45px;
+    width: 80px;
+    background: green;
+    border: none;
+    border-radius:10px;
+}
+.btna{
+    text-decoration: none;
+    color: #ffffff;
+}
